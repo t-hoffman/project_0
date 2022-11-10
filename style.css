@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Bungee+Inline&display=swap');
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Bungee Inline', cursive;
     text-align: center;
 }
 
@@ -37,6 +37,9 @@ body {
     padding: 20px;
     border-left: 10px solid #dceef7;
     border-right: 10px solid #dceef7;
+    height: 300px;
+    vertical-align: middle;
+    background-color: white;
 }
 
 .game-area {
@@ -48,6 +51,7 @@ body {
 
 .game-scores {
     display: flex;
+    font-size: 16pt;;
 }
 
 .game-left {
@@ -75,4 +79,13 @@ body {
     color: white;
     font-family: 'Bungee Inline', cursive;
     font-size: 18pt;
+}
+
+#message {
+    font-family: 'Bungee Inline', cursive;
+    color: yellow;
+    background-color: #ba0505;
+    font-size: 24pt;
+    padding: 15px;
+    visibility: hidden;
 }

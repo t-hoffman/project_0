@@ -13,7 +13,7 @@ const ageInterval = setInterval(() => {
 
     ageBox = document.getElementById('age');
     ageBox.textContent = tamagotchi.age;
-}, 6000);
+}, 30000);
 
 // Custom setInterval function to call hunger, boredom, etc.
 
@@ -22,20 +22,29 @@ function customInterval(type, int) {
     const text = document.getElementById(`${type}-text`);
 
     button.addEventListener('click', () => {
-        tamagotchi[type] -= 1;
-        text.textContent = tamagotchi[type];
+        if (tamagotchi[type] >= 0) {
+            tamagotchi[type] -= 1;
+            text.textContent = tamagotchi[type] >= 0 ? tamagotchi[type] : 0;
+        }
         const img = document.querySelector('.pet-image img');
         img.src = `images/${type}.png`;
     });
 
     const interval = setInterval(() =>{
         if (tamagotchi[type] >= 9) {  
-            clearInterval(interval);
             const body = document.querySelector('body');
             console.log(body);
             body.style.backgroundColor = '#000000';
             const img = document.querySelector('.pet-image img');
             img.src = 'images/sad.png';
+            const buttons = document.querySelector('.buttons');
+            buttons.style.display = 'none';
+            const message = document.getElementById('message');
+            message.style.visibility = 'visible';
+            message.textContent = 'GAME OVER!'
+            const scores = document.querySelector('.game-scores');
+            scores.style.display = 'none';
+            clearInterval(interval);
         }
 
         tamagotchi[type] += 1;
@@ -46,5 +55,5 @@ function customInterval(type, int) {
 // Call customInterval for each button we have, set time
 
 customInterval('hunger', 4000);
-customInterval('sleepiness', 7000);
-customInterval('boredom', 100);
+customInterval('sleepiness', 5000);
+customInterval('boredom', 2000);
