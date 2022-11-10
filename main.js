@@ -14,3 +14,12 @@ const ageInterval = setInterval(() => {
     ageBox = document.getElementById('age');
     ageBox.textContent = currentAge;
 }, 60000);
+
+const hungerBtn = document.getElementById('hunger-btn');
+const hungerTxt = document.getElementById('hunger-text');
+let currentHunger = tamagotchi.hunger;
+
+hungerBtn.addEventListener('click', (e) => {
+    currentHunger -= 1;
+    hungerTxt.textContent = currentHunger;
+});
