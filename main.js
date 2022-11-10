@@ -1,35 +1,44 @@
 const tamagotchi = {
-    name: '',
+    name: 'Lilo',
     hunger: 0,
     sleepiness: 0,
     boredom: 0,
     age: 1,
 };
 
-let currentAge = tamagotchi.age;
 
 const ageInterval = setInterval(() => {
-    currentAge += 1;
+    tamagotchi.age += 1;
 
     ageBox = document.getElementById('age');
-    ageBox.textContent = currentAge;
-}, 60000);
+    ageBox.textContent = tamagotchi.age;
+}, 6000);
 
-const hungerBtn = document.getElementById('hunger-btn');
-const hungerTxt = document.getElementById('hunger-text');
-let currentHunger = tamagotchi.hunger;
+// Custom setInterval function to call hunger, boredom, etc.
 
-hungerBtn.addEventListener('click', (e) => {
-    currentHunger -= 1;
-    hungerTxt.textContent = currentHunger;
-});
+function customInterval(type, int) {
+    const button = document.getElementById(`${type}-btn`);
+    const text = document.getElementById(`${type}-text`);
 
-const hungerInterval = setInterval(() =>{
-    if (currentHunger >= 9) {
-        clearInterval(hungerInterval);
+    button.addEventListener('click', () => {
+        tamagotchi[type] -= 1;
+        text.textContent = tamagotchi[type];
+    });
 
-    }
+    const interval = setInterval(() =>{
+        if (tamagotchi[type] >= 9) {
+            clearInterval(interval);
 
-    currentHunger += 1;
-    hungerTxt.textContent = currentHunger;
-}, 1000);
+        }
+
+        tamagotchi[type] += 1;
+        text.textContent = tamagotchi[type];
+        //console.log(tamagotchi)
+    }, int);
+}
+
+// Call customInterval for each button we have, set time
+
+customInterval('hunger', 1000);
+customInterval('sleepiness', 2000);
+customInterval('boredom', 3000);
