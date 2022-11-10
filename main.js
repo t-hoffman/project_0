@@ -23,3 +23,13 @@ hungerBtn.addEventListener('click', (e) => {
     currentHunger -= 1;
     hungerTxt.textContent = currentHunger;
 });
+
+const hungerInterval = setInterval(() =>{
+    if (currentHunger >= 9) {
+        clearInterval(hungerInterval);
+
+    }
+
+    currentHunger += 1;
+    hungerTxt.textContent = currentHunger;
+}, 1000);
