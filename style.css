@@ -1,5 +1,74 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/*
+    Images credit: https://www.pngwing.com/en/free-png-kfbcw
+*/
 
-* {
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Bungee+Inline&display=swap');
+
+body {
     font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+}
+
+.container img {
+    width: 300px;
+}
+
+.header {
+    font-family: 'Bungee Inline', cursive;
+    color: #046491;
+    background-color: #dceef7;
+}
+
+.pet-image {
+    padding: 20px;
+    border-left: 10px solid #dceef7;
+    border-right: 10px solid #dceef7;
+}
+
+.game-area {
+    display: flex;
+    flex-direction: column;
+    background-color: #f7f7f7;
+    padding: 20px;
+}
+
+.game-left {
+    width: 50%;
+    text-align: right;
+    padding: 10px;
+}
+
+.game-right {
+    width: 50%;
+    text-align: left;
+    padding: 10px;
+}
+
+.buttons {
+    padding: 25px;
+    background-color: white;
+}
+
+.buttons button {
+    background-color: #19496B;
+    padding: 25px;
+    border: 0px;
+    cursor: pointer;
+    color: white;
+    font-family: 'Bungee Inline', cursive;
+    font-size: 18pt;
 }

@@ -9,6 +9,30 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Hello World</h1>
+    <div class="container">
+        <div class="header"><h1>My name is <span id="pet-name">Lilo</span>!</h1></div>
+        <div class="pet-image"><img src="images/happy.png" /></div>
+        <div class="game-area">
+            <div style="display: flex; flex-direction: row;">
+                <div class="game-left">
+                    <p>Age:</p>
+                    <p>Hunger:</p>
+                    <p>Sleepiness:</p>
+                    <p>Boredom:</p>
+                </div>
+                <div class="game-right">
+                    <p id="age">1</p>
+                    <p id="hunger-text">0</p>
+                    <p id="sleepiness-text">0</p>
+                    <p id="boredom-text">0</p>
+                </div>
+            </div>
+            <div class="buttons">
+                <p><button id="hunger-btn">Feed Lilo</button></p>
+                <p><button id="sleepiness-btn">Wake Lilo Up</button></p>
+                <p><button id="boredom-btn">Play with Lilo</button></p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
