@@ -13,7 +13,17 @@ const ageInterval = setInterval(() => {
 
     ageBox = document.getElementById('age');
     ageBox.textContent = tamagotchi.age;
-}, 30000);
+}, 3000);
+
+// DOM insert name
+// const input = document.getElementById('pet-input');
+// const petName = document.getElementById('pet-name');
+// input.addEventListener('input', () => {
+//     tamagotchi.name = input.value;
+//     petName.textContent = tamagotchi.name;
+// });
+const petName = document.getElementById('pet-name');
+petName.textContent = tamagotchi.name;
 
 // Custom setInterval function to call hunger, boredom, etc.
 
@@ -48,7 +58,7 @@ function customInterval(type, int) {
             buttons.style.display = 'none';
             const message = document.getElementById('message');
             message.style.visibility = 'visible';
-            message.innerHTML = `GAME OVER!<br />Lilo died of ${type}`;
+            message.innerHTML = `GAME OVER!<br />${tamagotchi.name} died of ${type}`;
         
             clearInterval(interval);
         }

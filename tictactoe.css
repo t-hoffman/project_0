@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Bungee+Inline&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Bungee Inline', cursive;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 550px;
+}
+
+.header {
+    background-color: #f7f7f7;
+    color: #bfbfbf;
+}
+
+.game-area {
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    width: 100%;
+    font-size: 24pt;
+    color: #505050;
+    cursor: pointer;
+}
+
+.game-row-1 {
+    padding: 25px;
+    background-color: #bfbfbf;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-row-2 {
+    padding: 25px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
