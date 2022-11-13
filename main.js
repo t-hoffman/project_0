@@ -17,11 +17,14 @@ const ageInterval = setInterval(() => {
 
 // DOM insert name
 const input = document.getElementById('pet-input');
-const petName = document.getElementById('pet-name');
+const petNames = document.querySelectorAll('#pet-name');
 input.addEventListener('input', () => {
-    if (input.value) tamagotchi.name = input.value;
-    petName.textContent = tamagotchi.name;
-    console.log(tamagotchi.name)
+    if (input.value) {
+        petNames.forEach((e) => {
+        tamagotchi.name = input.value;
+        e.textContent = tamagotchi.name;
+        });
+    }
 });
 
 
