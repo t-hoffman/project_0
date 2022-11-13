@@ -1,8 +1,11 @@
+// DOM grab the game area and add a 'click' event listener
 let gameArea = document.querySelector('.game-area');
 let gameRows = document.querySelectorAll('.row');
 
 gameArea.addEventListener('click', () => {ticTacToe()});
 
+
+// Setting the variables needed throughout the code
 const winningPatterns = {
     1: [1, 2, 3],
     2: [1, 5, 9],
@@ -24,6 +27,8 @@ let score = {
 let currentBoard = {x: [], o: []};
 
 function checkWinner() {
+    // Get the current board's filled spots
+
     gameRows.forEach((doc) => {
         let choice = doc.textContent.toLowerCase();
         let player = currentBoard[choice];
@@ -33,6 +38,8 @@ function checkWinner() {
 
     const playerX = currentBoard.x.sort();
     const playerO = currentBoard.o.sort();
+
+    // Check all winning patterns for both players and see if anyone has won this round
 
     for (let i = 1; i <= 8; i++) {
         let pattern = winningPatterns[i];
@@ -61,6 +68,8 @@ function checkWinner() {
     return false;
 }
 
+// DOM manipulation of the board by type
+
 function changeBoard(type, text) {
     gameRows.forEach((e) => {
         e.textContent = '';
@@ -88,6 +97,8 @@ function changeBoard(type, text) {
 }
 
 function ticTacToe() {
+    // DOM manipulation to change board box and add 'try again' if clicked more than once
+
     let playerPick = event.target.id;
 
     const pushPick = document.getElementById(`${playerPick}`);
@@ -106,9 +117,13 @@ function ticTacToe() {
             document.querySelector('.try-again').prepend(tryAgain);
         }
     }
+
+    // DOM manipulation to change the 'player turn' area
     const turnID = document.getElementById('turn');
     turnID.textContent = playerTurn;
     
+
+    // Check for winner and changing the board w/ DOM using changeBoard for win and tie
     let winner = checkWinner();
     if (winner) {
         changeBoard('winner', `winner ${winner}`);
