@@ -116,7 +116,7 @@ function ticTacToe() {
         playerTurn = winner;
         score[winner] += 1;
         turnID.textContent = winner;
-        
+
         const scoreArea = document.getElementById(`${winner}-score`);
         scoreArea.textContent = score[winner];
     } else {
@@ -130,24 +130,3 @@ function ticTacToe() {
         }
     }
 }
-
-
-
-
-
-
-// const playerX = [1,2,3,6];
-// for (let i = 1; i <= 6; i++) {
-//     let pattern = winningPatterns[i];
-//     let x = 0;
-
-//     playerX.forEach((choice) => {
-//         if (choice === pattern[0] || choice === pattern[1] || choice === pattern[2]) {
-//             x++;
-//         }
-//     });
-
-//     if (x === 3) {
-//         console.log('Player X Wins!');
-//     }
-// }
