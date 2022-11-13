@@ -15,14 +15,39 @@ body {
     width: 550px;
 }
 
+.turn {
+    display: flex;
+    background-color: rgb(26, 223, 240);
+    padding: 15px;
+    border-radius: 5px 5px 0px 0px;
+    color: white;
+    border-bottom: 5px solid white;
+}
+
+.try-again {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.try {
+    background-color: #e50000;
+    padding: 15px;
+    border-radius: 5px 5px 0px 0px;
+    color: white;
+    border-bottom: 5px solid white; 
+}
+
 .header {
     background-color: #f7f7f7;
     color: #bfbfbf;
+    border-radius: 5px;
+    cursor: default;
 }
 
 .game-area {
     display: grid;
-    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     width: 100%;
     font-size: 24pt;
     color: #505050;
@@ -44,4 +69,48 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.score-container {
+    display: flex;
+    justify-content: baseline;
+    cursor: default;
+}
+
+.score {
+    border-top: 3px solid white;
+    background-color: dodgerblue;
+    padding: 25px;
+    /*width: 134px;*/
+    width: 316px;
+    border-radius: 0 0 5px 5px;
+    color: white;
+    text-align: left;
+}
+
+#x-score, #o-score { color: yellow; }
+
+.winner {
+    background-color: #26af00;
+    color: #d9ffce;
+    padding: 25px;
+    font-size: 60pt;
+    cursor: default;
+}
+
+.tie {
+    background-color: #f1d602;
+    color: #fff897;
+    padding: 25px;
+    font-size: 60pt;
+    cursor: default;
+}
+
+.play-again {
+    background-color: #f7f7f7;
+    color: #505050;
+    padding: 25px;
+    font-size: 26pt;
+    border-radius: 0 0 5px 0;
+    cursor: pointer;
 }

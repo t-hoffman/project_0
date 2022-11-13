@@ -10,20 +10,31 @@
 </head>
 <body>
     <div class="container">
+        <div class="try-again">
+            <div style="width: 5px"></div>
+            <div class="turn"><span id="turn">x</span>'s turn</div>            
+        </div>
         <div class="header">
             <h1>X O X O X O X</h1>
             <h2>Tic Tac Toe</h2>
         </div>
         <div class="game-area">
-            <div class="game-row-1">X</div>
-            <div class="game-row-2">X</div>
-            <div class="game-row-1">O</div>
-            <div class="game-row-2">X</div>
-            <div class="game-row-1">X</div>
-            <div class="game-row-2">O</div>
-            <div class="game-row-1">X</div>
-            <div class="game-row-2">X</div>
-            <div class="game-row-1">O</div>
+            <div class="row game-row-1" id="1"></div>
+            <div class="row game-row-2" id="2"></div>
+            <div class="row game-row-1" id="3"></div>
+            <div class="row game-row-2" id="4"></div>
+            <div class="row game-row-1" id="5"></div>
+            <div class="row game-row-2" id="6"></div>
+            <div class="row game-row-1" id="7"></div>
+            <div class="row game-row-2" id="8"></div>
+            <div class="row game-row-1" id="9" style="border-radius: 0 0 5px 0;"></div>
+        </div>
+        <div class="score-container">
+            <div class="score">
+                Score &ensp; &ensp; &ensp; &ensp; 
+                X &ensp; &ensp; &ensp; <span id="x-score">0</span> &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;
+                O &ensp; &ensp; &ensp; <span id="o-score">0</span>
+            </div>
         </div>
     </div>
 </html>
