@@ -39,10 +39,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
     border-left: 10px solid #dceef7;
     border-right: 10px solid #dceef7;
-    height: 325px;
+    height: 300px;
     vertical-align: middle;
     background-color: white;
 }
@@ -56,7 +55,7 @@ body {
 
 .game-scores {
     display: flex;
-    font-size: 16pt;;
+    font-size: 14pt;
 }
 
 .game-left {
@@ -71,13 +70,12 @@ body {
 }
 
 .buttons {
-    padding: 25px;
     background-color: white;
 }
 
 .buttons button {
     background-color: #19496B;
-    padding: 25px;
+    padding: 15px;
     border: 0px;
     cursor: pointer;
     color: white;
