@@ -27,6 +27,7 @@ body {
 
 .container img {
     width: 250px;
+    max-height: 95%;
 }
 
 .header {
